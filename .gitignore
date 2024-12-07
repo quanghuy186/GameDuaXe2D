@@ -1,0 +1,26 @@
+# Ignore the Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+
+# Ignore user-specific files
+UserSettings/
+
+# Ignore Visual Studio / Rider files
+.vscode/
+.idea/
+.vs/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.mdb
+
+# Ignore the macOS Finder file
+.DS_Store
+
+# Ignore the Windows Thumbs.db file
+Thumbs.db
