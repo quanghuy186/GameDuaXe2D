@@ -4,8 +4,8 @@ public class CarController : MonoBehaviour {
     public float moveSpeed = 10f;      // Tốc độ di chuyển sang trái/phải
     public float smoothMoveTime = 0.1f; // Thời gian làm mượt chuyển động
 
-    public float minX = -2.8f;   // Giới hạn bên trái
-    public float maxX = 2.9f;    // Giới hạn bên phải
+    public float minX = -1.7f;   // Giới hạn bên trái
+    public float maxX = 1.7f;    // Giới hạn bên phải
 
 
     private float targetPositionX;     // Vị trí X mục tiêu
