@@ -7,6 +7,8 @@ public class CarController : MonoBehaviour {
     public float minX = -1.7f;   // Giới hạn bên trái
     public float maxX = 1.7f;    // Giới hạn bên phải
 
+    public bool isDead = false;
+
 
     private float targetPositionX;     // Vị trí X mục tiêu
     private float currentVelocity = 0f;
@@ -30,7 +32,14 @@ public class CarController : MonoBehaviour {
         
         // Cập nhật vị trí mới
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
-        
+    }
+
+    private void OnTriggerEnter2D(Collider2D col) {
+        if(col.CompareTag(Const.OBSTACLE_TAG)){
+            gameObject.SetActive(false);
+            col.gameObject.SetActive(false);
+            isDead = true;
+        }
     }
 }
 
