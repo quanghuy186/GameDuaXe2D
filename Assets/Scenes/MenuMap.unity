@@ -442,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 27
 
 '
   m_isRightToLeft: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 8
 
 '
   m_isRightToLeft: 0
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 6
 
 '
   m_isRightToLeft: 0
@@ -1392,7 +1392,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 3
+
 
 '
   m_isRightToLeft: 0
@@ -1663,7 +1664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 19
 
 '
   m_isRightToLeft: 0
@@ -2678,7 +2679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 26
 
 '
   m_isRightToLeft: 0
@@ -2926,7 +2927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000061035156}
   m_SizeDelta: {x: 0.000061035, y: 0.00012207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481531312
@@ -3278,7 +3279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 38
 
 '
   m_isRightToLeft: 0
@@ -3416,7 +3417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 14
 
 '
   m_isRightToLeft: 0
@@ -3554,7 +3555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 32
 
 '
   m_isRightToLeft: 0
@@ -3692,7 +3693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 22
 
 '
   m_isRightToLeft: 0
@@ -3830,7 +3831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 16
 
 '
   m_isRightToLeft: 0
@@ -3968,9 +3969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
-
-'
+  m_text: Level 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4106,7 +4105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 7
 
 '
   m_isRightToLeft: 0
@@ -4244,7 +4243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 11
 
 '
   m_isRightToLeft: 0
@@ -4648,7 +4647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 30
 
 '
   m_isRightToLeft: 0
@@ -5187,6 +5186,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Level 2
 
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 28
 
 '
   m_isRightToLeft: 0
@@ -5594,7 +5594,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 5
+
 
 '
   m_isRightToLeft: 0
@@ -6131,7 +6132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 23
 
 '
   m_isRightToLeft: 0
@@ -6402,7 +6403,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 4
+
 
 '
   m_isRightToLeft: 0
@@ -6540,7 +6542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 39
 
 '
   m_isRightToLeft: 0
@@ -6944,7 +6946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 25
 
 '
   m_isRightToLeft: 0
@@ -7082,7 +7084,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 29
 
 '
   m_isRightToLeft: 0
@@ -7486,7 +7488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 18
 
 '
   m_isRightToLeft: 0
@@ -7624,7 +7626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 20
 
 '
   m_isRightToLeft: 0
@@ -7895,7 +7897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 36
 
 '
   m_isRightToLeft: 0
@@ -8283,7 +8285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 13
 
 '
   m_isRightToLeft: 0
@@ -8554,7 +8556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 9
 
 '
   m_isRightToLeft: 0
@@ -8825,7 +8827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 37
 
 '
   m_isRightToLeft: 0
@@ -8963,9 +8965,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
-
-'
+  m_text: Level 34
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9483,7 +9483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 35
 
 '
   m_isRightToLeft: 0
@@ -9621,7 +9621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 15
 
 '
   m_isRightToLeft: 0
@@ -10025,7 +10025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 33
 
 '
   m_isRightToLeft: 0
@@ -10163,7 +10163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 31
 
 '
   m_isRightToLeft: 0
@@ -10567,7 +10567,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Quay L\u1EA1i\n"
+  m_text: 'Back
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10703,7 +10705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 12
 
 '
   m_isRightToLeft: 0
@@ -10841,7 +10843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 17
 
 '
   m_isRightToLeft: 0
@@ -10979,7 +10981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 24
 
 '
   m_isRightToLeft: 0
@@ -11250,7 +11252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 10
 
 '
   m_isRightToLeft: 0
@@ -11521,7 +11523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Level 21
 
 '
   m_isRightToLeft: 0
