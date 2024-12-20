@@ -4,9 +4,6 @@ public class ObstacleController : MonoBehaviour
 {
     public float speed;
 
-     // Biến lưu giới hạn dưới
-    public Transform limitBottom;
-
     public float minX = -2.5f;
     public float maxX = 2.5f;
     public float spawnY = 5f;
@@ -35,10 +32,6 @@ public class ObstacleController : MonoBehaviour
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
 
-        if (transform.position.y <= limitBottom.position.y)
-        {
-            RespawnObstacle();
-        }
     }
 
    

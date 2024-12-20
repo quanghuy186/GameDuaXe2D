@@ -16,4 +16,10 @@ public class GameOverManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+     public void ExitToMainMenu()
+    {
+        Time.timeScale = 1f; // Đảm bảo thời gian trở lại bình thường
+        SceneManager.LoadScene("MainScene"); // Tải scene MainMenu
+    }
 }
