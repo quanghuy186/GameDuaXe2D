@@ -12,10 +12,13 @@ public class CarController : MonoBehaviour
 
     // Tham chiếu đến GameOverManager
     public GameOverManager gameOverManager;
+    public GameObject explosionEffectPrefab;  // Tham chiếu đến Prefab hiệu ứng nổ
+    public AudioClip explosionSound;          // Tham chiếu đến âm thanh nổ
 
     void Start()
     {
         targetPositionX = transform.position.x;
+        gameObject.SetActive(true); // Đảm bảo xe hiển thị khi bắt đầu
     }
 
     void Update()
@@ -38,9 +41,25 @@ public class CarController : MonoBehaviour
     {
         if (col.CompareTag("Obstacle"))
         {
-            gameObject.SetActive(false);
-            col.gameObject.SetActive(false);
+            // Hiển thị hiệu ứng nổ tại vị trí của xe
+            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+
+            // Phát âm thanh nổ
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+
+            // Ẩn đối tượng player (tạm thời)
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+            // Hiển thị Game Over
             gameOverManager.ShowGameOver();
         }
+    }
+
+    public void ResetCar()
+    {
+        // Hiển thị lại xe
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        targetPositionX = 0; // Reset vị trí về giữa
+        transform.position = new Vector3(0, transform.position.y, transform.position.z);
     }
 }
