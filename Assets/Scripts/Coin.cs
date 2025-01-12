@@ -3,6 +3,8 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float speed = 3f; // Tốc độ di chuyển của coin
+    public int coinValue = 1; // Giá trị của đồng xu
+
 
     void Update()
     {
@@ -14,16 +16,13 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Hủy coin khi chạm vào player
+            CoinManager.instance.AddCoin(coinValue);
+
             Destroy(gameObject);
         }
 
-        // Hủy coin khi ra khỏi màn hình để tránh rác bộ nhớ
-        Debug.Log("Chạm vào: " + other.tag);
-
         if (other.CompareTag("Boundary"))
         {
-            Debug.Log("Coin đã chạm vào Boundary");
             Destroy(gameObject);
         }
 
