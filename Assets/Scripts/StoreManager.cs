@@ -10,59 +10,57 @@ public class StoreManager : MonoBehaviour
         public string name;           // Tên xe
         public Sprite image;          // Hình ảnh xe
         public int price;             // Giá xe
-        public bool isPurchased;      // Trạng thái đã mua hay chưa
-        public bool isSelected;       // Trạng thái được chọn hay không
+        public bool isPurchased;      // Trạng thái đã mua
+        public bool isSelected;       // Trạng thái được chọn
         public GameObject carItem;    // Tham chiếu tới ô xe trong UI
         public Button buyButton;      // Nút mua
         public Button selectButton;   // Nút chọn
         public Button selectedButton; // Nút đã chọn
-        public TextMeshProUGUI priceText; // Giá xe hiển thị
+        public TextMeshProUGUI priceText; // Hiển thị giá xe
         public Image carImage;        // Hình ảnh xe
     }
 
-    public Car[] cars;               // Danh sách xe
-    public TextMeshProUGUI PlayerMoneyText;  // TextMeshProUGUI để hiển thị tiền của người chơi
-    private int playerMoney = 1000;   // Tiền của người chơi
+    public Car[] cars;                       // Danh sách các xe trong cửa hàng
+    public TextMeshProUGUI PlayerMoneyText;  // Hiển thị tiền người chơi
+    private int playerMoney = 1000;          // Tiền mặc định của người chơi
 
     void Start()
     {
-        // Tải số tiền và trạng thái các xe từ PlayerPrefs
-        playerMoney = PlayerPrefs.GetInt("PlayerMoney", 1000); // Lấy tiền người chơi (mặc định là 1000)
-        PlayerMoneyText.text = playerMoney.ToString();
+        // Tải dữ liệu từ PlayerPrefs
+        playerMoney = PlayerPrefs.GetInt("PlayerMoney", 1000); // Tiền của người chơi
+        PlayerMoneyText.text = playerMoney.ToString();         // Hiển thị tiền
+        LoadCarStates();                                       // Tải trạng thái xe
 
-        // Tải trạng thái các xe (đã mua, đã chọn) từ PlayerPrefs
-        LoadCarStates();
-
-        // Hiển thị các xe trong cửa hàng
+        // Hiển thị trạng thái cửa hàng
         PopulateStore();
     }
 
     void PopulateStore()
     {
-        // Duyệt qua tất cả các xe và cập nhật giao diện
+        // Cập nhật trạng thái từng xe trong cửa hàng
         foreach (var car in cars)
         {
-            // Cập nhật giá và hình ảnh xe
-            car.carImage.sprite = car.image;
-            car.priceText.text = car.price.ToString();
+            car.carImage.sprite = car.image;       // Hiển thị hình ảnh xe
+            car.priceText.text = car.price.ToString(); // Hiển thị giá xe
 
-            // Xử lý trạng thái của nút
+            // Kiểm tra trạng thái xe
             if (car.isPurchased)
             {
-                // Nếu xe đã mua
+                // Xe đã mua
                 if (car.isSelected)
                 {
-                    // Nếu xe được chọn
-                    car.selectedButton.gameObject.SetActive(true);  // Hiển thị nút "Selected"
-                    car.selectButton.gameObject.SetActive(false);  // Ẩn nút "Select"
-                    car.buyButton.gameObject.SetActive(false);     // Ẩn nút "Buy"
+                    // Xe đang được chọn
+                    car.selectedButton.gameObject.SetActive(true);
+                    car.selectButton.gameObject.SetActive(false);
+                    car.buyButton.gameObject.SetActive(false);
                 }
                 else
                 {
-                    // Nếu xe đã mua nhưng chưa được chọn
-                    car.selectedButton.gameObject.SetActive(false); // Ẩn nút "Selected"
-                    car.selectButton.gameObject.SetActive(true);    // Hiển thị nút "Select"
-                    car.buyButton.gameObject.SetActive(false);      // Ẩn nút "Buy"
+                    // Xe đã mua nhưng chưa được chọn
+                    car.selectedButton.gameObject.SetActive(false);
+                    car.selectButton.gameObject.SetActive(true);
+                    car.buyButton.gameObject.SetActive(false);
+
                     car.selectButton.GetComponentInChildren<TextMeshProUGUI>().text = "Select";
                     car.selectButton.onClick.RemoveAllListeners();
                     car.selectButton.onClick.AddListener(() => SelectCar(car));
@@ -70,10 +68,11 @@ public class StoreManager : MonoBehaviour
             }
             else
             {
-                // Nếu xe chưa mua
-                car.selectedButton.gameObject.SetActive(false);  // Ẩn nút "Selected"
-                car.selectButton.gameObject.SetActive(false);   // Ẩn nút "Select"
-                car.buyButton.gameObject.SetActive(true);       // Hiển thị nút "Buy"
+                // Xe chưa mua
+                car.selectedButton.gameObject.SetActive(false);
+                car.selectButton.gameObject.SetActive(false);
+                car.buyButton.gameObject.SetActive(true);
+
                 car.buyButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy";
                 car.buyButton.onClick.RemoveAllListeners();
                 car.buyButton.onClick.AddListener(() => BuyCar(car));
@@ -83,17 +82,18 @@ public class StoreManager : MonoBehaviour
 
     void BuyCar(Car car)
     {
-        if (playerMoney >= car.price) // Kiểm tra đủ tiền để mua xe
+        // Kiểm tra nếu người chơi đủ tiền để mua xe
+        if (playerMoney >= car.price)
         {
-            car.isPurchased = true; // Đánh dấu xe đã mua
-            playerMoney -= car.price; // Trừ tiền
-            PlayerMoneyText.text = playerMoney.ToString(); // Cập nhật tiền sau khi mua
+            playerMoney -= car.price;         // Trừ tiền
+            car.isPurchased = true;          // Đánh dấu xe đã mua
+            PlayerMoneyText.text = playerMoney.ToString(); // Cập nhật tiền hiển thị
 
-            // Lưu lại trạng thái tiền và xe đã mua vào PlayerPrefs
+            // Lưu dữ liệu
             PlayerPrefs.SetInt("PlayerMoney", playerMoney);
-            PlayerPrefs.SetInt(car.name + "_isPurchased", 1); // Lưu trạng thái đã mua của xe
+            PlayerPrefs.SetInt(car.name + "_isPurchased", 1);
 
-            PopulateStore(); // Làm mới cửa hàng để hiển thị lại trạng thái xe
+            PopulateStore(); // Làm mới giao diện cửa hàng
         }
         else
         {
@@ -103,50 +103,66 @@ public class StoreManager : MonoBehaviour
 
     void SelectCar(Car car)
     {
-        // Bỏ chọn tất cả xe và cập nhật lại UI
+        // Bỏ chọn tất cả xe
         foreach (var c in cars)
         {
             c.isSelected = false;
-            c.selectButton.GetComponentInChildren<TextMeshProUGUI>().text = "Select"; // Cập nhật lại tên nút
-            c.selectedButton.gameObject.SetActive(false); // Ẩn nút "Selected"
+            c.selectButton.GetComponentInChildren<TextMeshProUGUI>().text = "Select";
+            c.selectedButton.gameObject.SetActive(false);
         }
 
-        // Đánh dấu xe được chọn
+        // Chọn xe hiện tại
         car.isSelected = true;
-        car.selectedButton.gameObject.SetActive(true);  // Hiển thị nút "Selected"
-        car.selectButton.gameObject.SetActive(false);  // Ẩn nút "Select"
-        car.buyButton.gameObject.SetActive(false);     // Ẩn nút "Buy"
-        PopulateStore(); // Làm mới cửa hàng để hiển thị trạng thái xe đã chọn
+        car.selectedButton.gameObject.SetActive(true);
+        car.selectButton.gameObject.SetActive(false);
+        car.buyButton.gameObject.SetActive(false);
 
-        // Lưu lại trạng thái xe đã chọn
+        // Lưu xe đã chọn
         PlayerPrefs.SetString("SelectedCar", car.name);
+
+        PopulateStore(); // Cập nhật giao diện
     }
 
     void LoadCarStates()
     {
-        // Duyệt qua các xe và tải trạng thái đã lưu từ PlayerPrefs
+        // Tải trạng thái đã mua và đã chọn cho từng xe
         bool anyCarSelected = false;
+
         foreach (var car in cars)
         {
-            // Kiểm tra trạng thái đã mua của xe
+            // Kiểm tra trạng thái mua
             if (PlayerPrefs.GetInt(car.name + "_isPurchased", 0) == 1)
             {
-                car.isPurchased = true; // Nếu đã mua thì đánh dấu là đã mua
+                car.isPurchased = true;
             }
 
-            // Kiểm tra trạng thái xe đã chọn
+            // Kiểm tra trạng thái chọn
             if (PlayerPrefs.GetString("SelectedCar", "") == car.name)
             {
-                car.isSelected = true; // Nếu xe này được chọn thì đánh dấu là đã chọn
-                anyCarSelected = true; // Ghi nhận là đã có xe được chọn
+                car.isSelected = true;
+                anyCarSelected = true;
             }
         }
 
-        // Nếu không có xe nào được chọn, chọn xe mặc định (ví dụ xe đầu tiên)
+        // Nếu không có xe nào được chọn, chọn xe đầu tiên mặc định
         if (!anyCarSelected && cars.Length > 0)
         {
-            cars[0].isSelected = true; // Chọn xe đầu tiên mặc định
-            PlayerPrefs.SetString("SelectedCar", cars[0].name); // Lưu lại xe được chọn mặc định
+            cars[0].isSelected = true;
+            PlayerPrefs.SetString("SelectedCar", cars[0].name);
         }
+    }
+
+    public void ResetStore()
+    {
+        // Đặt lại dữ liệu khi rời khỏi cửa hàng
+        foreach (var car in cars)
+        {
+            car.isPurchased = false;
+            car.isSelected = false;
+        }
+        playerMoney = 1000; // Đặt lại tiền mặc định
+        PlayerPrefs.DeleteAll(); // Xóa toàn bộ dữ liệu đã lưu
+        PlayerPrefs.Save();
+        Debug.Log("Dữ liệu cửa hàng đã được đặt lại!");
     }
 }

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3985799521238877547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7322815609227699542}
+  - component: {fileID: 1435410417843184608}
+  m_Layer: 5
+  m_Name: StoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7322815609227699542
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985799521238877547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 92.455, y: 199.95}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1435410417843184608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985799521238877547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8615cabf2b9c02a47a238821ce651898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars:
+  - name: RedCar
+    image: {fileID: -7858528601299611448, guid: 47cb10c14f519f749ae9be5677475877, type: 3}
+    price: 100
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: YellowCar
+    image: {fileID: -248327258264204992, guid: 2238afc6010be624f9c0da7279624f66, type: 3}
+    price: 200
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: OrangeCar
+    image: {fileID: 5282408397570768724, guid: 2dccad1a486247844a5b774615977a52, type: 3}
+    price: 300
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: WhiteCar
+    image: {fileID: 8852529310483406936, guid: ebee1cd3dc180084f8dad44420c0fa3a, type: 3}
+    price: 400
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: BlackCar
+    image: {fileID: -4525378131882120712, guid: 3e09a338227084343982e009dd49b13d, type: 3}
+    price: 500
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: GreenCar
+    image: {fileID: -5761858341451481895, guid: a31d5365cebb7b24aa31a82c150c4dfb, type: 3}
+    price: 600
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: GrayCar
+    image: {fileID: -5069345327792109256, guid: 44b0b0f468a2b674db712c995e51c364, type: 3}
+    price: 700
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: BlueCar
+    image: {fileID: -7800161668622684062, guid: 459370c9cf10d1543993d78549a26db5, type: 3}
+    price: 800
+    isPurchased: 0
+    isSelected: 0
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  - name: StartCar
+    image: {fileID: 1380834815413223532, guid: 9445bd3609025b3449720a3f2a5cf97c, type: 3}
+    price: 0
+    isPurchased: 1
+    isSelected: 1
+    carItem: {fileID: 0}
+    buyButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    selectedButton: {fileID: 0}
+    priceText: {fileID: 0}
+    carImage: {fileID: 0}
+  playerMoneyText: {fileID: 0}

@@ -681,7 +681,7 @@ MonoBehaviour:
   - name: YellowCar
     image: {fileID: -248327258264204992, guid: 5eab4b8bebd67a34d8f510107da13cda, type: 3}
     price: 200
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 1957047334}
     buyButton: {fileID: 528802440}
@@ -692,7 +692,7 @@ MonoBehaviour:
   - name: OrangeCar
     image: {fileID: 5282408397570768724, guid: 5e4868bd9b689a142b05eeba82cd2bdc, type: 3}
     price: 300
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 1288680811}
     buyButton: {fileID: 1991135365}
@@ -703,7 +703,7 @@ MonoBehaviour:
   - name: WhiteCar
     image: {fileID: 8852529310483406936, guid: 4b302cc2a3e3ec644bccc2aa635e0048, type: 3}
     price: 400
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 365140024}
     buyButton: {fileID: 528802440}
@@ -714,7 +714,7 @@ MonoBehaviour:
   - name: BlackCar
     image: {fileID: -4525378131882120712, guid: 3615ecf01ca8c214285f8c6542ef8e21, type: 3}
     price: 500
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 633296256}
     buyButton: {fileID: 389111257}
@@ -725,7 +725,7 @@ MonoBehaviour:
   - name: GreenCar
     image: {fileID: -5761858341451481895, guid: 382dd1b9cc95dd04db3a4971d6397ae0, type: 3}
     price: 600
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 2006579461}
     buyButton: {fileID: 1592148086}
@@ -736,7 +736,7 @@ MonoBehaviour:
   - name: GrayCar
     image: {fileID: -5069345327792109256, guid: 5d41b425db8abd14399863d4935bf26d, type: 3}
     price: 700
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 1917153809}
     buyButton: {fileID: 1527159771}
@@ -747,7 +747,7 @@ MonoBehaviour:
   - name: BlueCar
     image: {fileID: -7800161668622684062, guid: cf9796fa3bf54764288a49c2027575e2, type: 3}
     price: 800
-    isPurchased: 1
+    isPurchased: 0
     isSelected: 0
     carItem: {fileID: 920704394}
     buyButton: {fileID: 1995890170}
@@ -759,7 +759,7 @@ MonoBehaviour:
     image: {fileID: -7921649188387484213, guid: 64d474e0b60052e429f5ccb0b8478b70, type: 3}
     price: 0
     isPurchased: 1
-    isSelected: 0
+    isSelected: 1
     carItem: {fileID: 2093336112}
     buyButton: {fileID: 1126625691}
     selectButton: {fileID: 31328531}
@@ -2444,6 +2444,10 @@ PrefabInstance:
     - target: {fileID: 8362005183841585445, guid: 1251ccaed1cf0c54ea97f1765d841a96, type: 3}
       propertyPath: m_Name
       value: ImgStartCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749455162768576197, guid: 1251ccaed1cf0c54ea97f1765d841a96, type: 3}
+      propertyPath: m_text
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

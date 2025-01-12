@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BGLoop : MonoBehaviour
 {
-    public float speed;           // Tốc độ di chuyển của hình nền
-    public Transform bg1;         // Hình nền 1
-    public Transform bg2;         // Hình nền 2
-    private float m_ySize;        // Chiều cao của hình nền
-    public bool isStart;   // Cờ để bắt đầu di chuyển
+    public float speed;           
+    public Transform bg1;         
+    public Transform bg2;         
+    private float m_ySize;        
+    public bool isStart;   
 
     void Awake()
     {

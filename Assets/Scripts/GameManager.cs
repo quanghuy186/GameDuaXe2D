@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text timerText;
     public GameObject winPanel;   // Bảng hiển thị chiến thắng
 
-    private bool gameEnded = false; // Cờ kiểm tra xem game đã kết thúc hay chưa
+    private bool gameEnded = false; // check game kết thúc
     
 
     void Start()
@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameEnded = true; // Đặt cờ kết thúc game
+        Time.timeScale = 0f;
         StopAllCoroutines(); // Dừng việc tạo chướng ngại vật
 
         // Hiển thị bảng chiến thắng
